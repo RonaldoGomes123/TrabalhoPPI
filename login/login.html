@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>Login - IGEN</title>
+    </style>
+</head>
+<body>
+    <header>
+        <a class="aIndex" href="../index.html"><h1>IGEN - Igualdade de Gênero</h1></a>
+        <div class="header-buttons">
+            <a href="#">Login</a>
+            <a href="../cadastrar/cadastro.html">Cadastrar</a>
+            <a href="../artigos/indexPublico.html">Artigos</a>
+            <a href="../sobreNos.html">Sobre Nos</a>
+        </div>
+    </header>
+    <div class="container-login">
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </div>
+    <footer>
+        &copy; 2023 IGEN - Igualdade de Gênero
+    </footer>
+
+    <script>
+        const loginForm = document.getElementById("loginForm");
+
+        loginForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const emailInput = document.getElementById("email");
+            const passwordInput = document.getElementById("password");
+
+            if (emailInput.value.trim() === "") {
+                alert("Por favor, insira um endereço de e-mail válido.");
+            } else if (passwordInput.value.trim() === "") {
+                alert("Por favor, insira a senha.");
+            } else {
+                window.location.href = "login-success.html";
+            }
+        });
+    </script>
+</body>
+</html>

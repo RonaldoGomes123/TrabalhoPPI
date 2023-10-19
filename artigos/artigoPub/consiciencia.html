@@ -4,13 +4,23 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width = device-width, initial-scale = 1.0"/>
         <meta http-equiv="X-UA-compatible" content="ie=edge"/>
-   
+        <link rel="stylesheet" href="../../style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <title>Consiciência de gênero</title>
     </head>
     
+    <body>   
+        <header>
+            <h1>IGEN - Igualdade de Gênero</h1>
+            <div class="header-buttons">
+                <a href="../../login/login.html">Login</a>
+                <a href="../../cadastrar/cadastro.html">Cadastrar</a>
+                <a href="../indexPublico.html">Artigos</a>
+                <a href="../../sobreNos.html">Sobre Nos</a>
 
-    <body>
-   
+            </div>
+        </header>
+        
         <section class="">
             <div style="text-align: center; font-size: large;">
                 <h2>Qual importância de conhermos os demais gêneros?</h2>
@@ -25,22 +35,25 @@
                 <p style="padding: 15px;text-align: justify; text-indent: 50px; margin: 15px; ">Por fim, a compreensão e aceitação dos demais gêneros também promovem o avanço da ciência e do conhecimento. Ao explorar a diversidade de experiências de gênero, podemos expandir nossos horizontes e ganhar uma compreensão mais profunda das complexidades da identidade humana. Isso abre portas para novas descobertas, perspectivas e inovações que podem beneficiar a sociedade como um todo. Portanto, conhecer e respeitar os demais gêneros é fundamental não apenas para a justiça social, mas também para o progresso humano em todas as áreas da vida.</p>
             </div>
 
-            <div class="">
+            <div class="centered-image">
 
             
-            <p style="text-align: center;"><img src="bandeiraL.jpg" alt="imgaem-bandeira" width="500" height="350"></p>
+            <p style="text-align: center;"><img src="../img/bandeiraL.jpg" alt="imgaem-bandeira" width="500" height="350"></p>
 
                 </div>
 
-            <div>
+                <div class="centered-buttons">
 
-               <a href="index.html"><img src="seta-init.png" alt="retonar a pagina incial  " width="100" height="100"></a>
-            </div>
-
-        </section>
-
+                    <button onclick="voltarParaArtigos()" class="btn btn-primary">Voltar para Artigos</button>
+                </div>
+    
+            </section>
+            <footer>
+                &copy; 2023 IGEN - Igualdade de Gênero
+            </footer>
+            <script>
+                function voltarParaArtigos() {
+                    window.location.href = "../indexPublico.html";
+                }
+            </script>
     </body>
-
-    <footer style="font-size: small; text-align: center;">
-        &copy; 2023 IGEN - Sistema de Promoção da Igualdade de Gênero
-        </footer>

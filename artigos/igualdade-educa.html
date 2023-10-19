@@ -4,11 +4,22 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width = device-width, initial-scale = 1.0"/>
         <meta http-equiv="X-UA-compatible" content="ie=edge"/>
-        
-        <title>Igualdade na educação</title>
-    </head>
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <body>
+        <title>Igualdade na educação</title>
+    </head >
+    <body>   
+        <header>
+            <h1>IGEN - Igualdade de Gênero</h1>
+            <div class="header-buttons">
+                <a href="../index.html" class="btn btn-danger">Sair</a>
+                <a href="cadastro_artigo.html" class="btn btn-success">Cadastrar Artigo</a>
+                <a href="../edit/editAccount.html" class="btn btn-success">Editar Conta</a>
+                <a href="edit/artigo.html" class="btn btn-success">Editar Artigos</a>
+                <a href="edit/usuario.html" class="btn btn-success">Editar Usuarios</a>
+            </div>
+        </header>
     <section>
 
         <div style="text-align: justify; padding: 15px; font-size: large; text-indent: 50px;">
@@ -23,25 +34,24 @@
 
         </div>
 
-        <div style="text-align: center;">
+        <div class="centered-image" >
 
-            <img src="igualdade-na-educação.jpg" alt="igualdade-na-educação" width="600" height="400">
+            <img src="img/igualdade-na-educação.jpg" alt="igualdade-na-educação" width="600" height="400">
         </div>
+        <div class="centered-buttons">
 
-        <div>
-
-            <a href="index.html"><img src="seta-init.png" alt="retonar a pagina incial  " width="100" height="100"></a>
-         </div>
-
+            <button onclick="voltarParaArtigos()" class="btn btn-primary">Voltar para Artigos</button>
+        </div>
 
     </section>
         
 
-
-
+    <footer>
+        &copy; 2023 IGEN - Igualdade de Gênero
+    </footer>
+    <script>
+        function voltarParaArtigos() {
+            window.location.href = "index.html";
+        }
+    </script>
     </body>
-
-
-    <footer style="font-size: small; text-align: center;">
-        &copy; 2023 IGEN - Sistema de Promoção da Igualdade de Gênero
-        </footer>

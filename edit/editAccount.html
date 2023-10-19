@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>Edição de Usuário - IGEN</title>
+</head>
+<body>
+    <header>
+        <h1>IGEN - Igualdade de Gênero</h1>
+        <div class="header-buttons">
+            <a href="../index.html" class="btn btn-danger">Sair</a>
+            <a href="../artigos/cadastro_artigo.html" class="btn btn-success">Cadastrar Artigo</a>
+            <a href="#" class="btn btn-success">Editar Conta</a>
+            <a href="../artigos/edit/artigo.html" class="btn btn-success">Editar Artigos</a>
+            <a href="../artigos/edit/usuario.html" class="btn btn-success">Editar Usuarios</a>           </div>
+    </header>
+    <div class="container">
+        <h2>Edição de Usuário</h2>
+        <form id="userEditForm">
+            <div class="form-group">
+                <label for="userImage">Foto de Perfil</label>
+                <input type="file" class="form-control-file" id="userImage" name="userImage">
+            </div>
+            <button type="submit" class="btn btn-primary">Alterar Foto</button>
+        </form>
+        <h3>Excluir Conta</h3>
+        <p>Tem certeza de que deseja excluir sua conta? Esta ação é irreversível.</p>
+        <button id="deleteAccount" class="btn btn-danger">Excluir Conta</button>
+    </div>
+    <div class="centered-buttons">
+
+        <button onclick="voltarParaArtigos()" class="btn btn-primary">Voltar para Artigos</button>
+    </div>
+    <footer>
+        &copy; 2023 IGEN - Igualdade de Gênero
+    </footer>
+
+    <script>
+        const userEditForm = document.getElementById("userEditForm");
+        const deleteAccountButton = document.getElementById("deleteAccount");
+
+        userEditForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+        });
+
+        deleteAccountButton.addEventListener("click", function () {
+            const confirmDelete = confirm("Tem certeza de que deseja excluir sua conta? Esta ação é irreversível.");
+            if (confirmDelete) {
+                alert("Sua conta foi excluída com sucesso.");
+                window.location.href = "../index.html";
+            }
+        });
+        function voltarParaArtigos() {
+            window.location.href = "../artigos/index.html";
+        }
+    </script>
+</body>
+</html>

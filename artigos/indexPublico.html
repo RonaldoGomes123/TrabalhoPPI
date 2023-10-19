@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>Artigos - IGEN</title>
+   
+</head>
+<body>
+    <header>
+        <a class="aIndex" href="../index.html"><h1>IGEN - Igualdade de Gênero</h1></a>
+        <div class="header-buttons">
+            <a href="../login/login.html">Login</a>
+            <a href="../cadastrar/cadastro.html">Cadastrar</a>
+            <a href="#">Artigos</a>
+            <a href="../sobreNos.html">Sobre Nos</a>
+
+        </div>
+    </header>
+    <div class="container">
+        <input type="text" id="search" placeholder="Pesquisar artigos">
+        <div class="article">
+            <a href="artigoPub/consiciencia.html">
+                <img src="img/bandeiraL.jpg" alt="Consciência de gênero">
+                <p>Consciência de gênero</p>
+            </a>
+        </div>
+        <div class="article">
+            <a href="artigoPub/Igualdade_generos.html">
+                <img src="img/igualdade.jpg" alt="Igualdade entre os gêneros">
+                <p>Igualdade entre os gêneros</p>
+            </a>
+        </div>
+        <div class="article">
+            <a href="artigoPub/Igualdade_salario.html">
+                <img src="img/igualdade-emprego.jpg" alt="Igualdade salarial">
+                <p>Igualdade salarial</p>
+            </a>
+        </div>
+        <div class="article">
+            <a href="artigoPub/igualdade-educa.html">
+                <img src="img/igualdade-na-educação.jpg" alt="Tema do Artigo 4">
+                <p>Igualdade de gênero na educação</p>
+            </a>
+        </div>
+    </div>
+    <footer>
+        &copy; 2023 IGEN - Igualdade de Gênero
+    </footer>
+    <script>
+        document.getElementById("search").addEventListener("input", function() {
+            const searchTerm = this.value.toLowerCase();
+            const articles = document.querySelectorAll(".article");
+            
+            articles.forEach(function(article) {
+                const articleText = article.textContent.toLowerCase();
+                if (articleText.includes(searchTerm)) {
+                    article.style.display = "block";
+                } else {
+                    article.style.display = "none";
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>

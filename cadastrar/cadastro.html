@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>Cadastro de Usuário - IGEN</title>
+</head>
+<body>
+    <header>
+        <a class="aIndex" href="../index.html"><h1>IGEN - Igualdade de Gênero</h1></a>
+            <div class="header-buttons">
+                <a href="../login/login.html">Login</a>
+                <a href="#">Cadastrar</a>
+                <a href="../artigos/indexPublico.html">Artigos</a>
+                <a href="../sobreNos.html">Sobre Nos</a>
+            </div>
+    </header>
+    <div class="container">
+        <h2>Cadastro de Usuário</h2>
+        <form id="userForm">
+            <div class="form-group">
+                <label for="userName">Nome</label>
+                <input type="text" class="form-control" id="userName" name="userName" required>
+            </div>
+            <div class="form-group">
+                <label for="userEmail">Email</label>
+                <input type="email" class="form-control" id="userEmail" name="userEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="userPassword">Senha</label>
+                <input type="password" class="form-control" id="userPassword" name="userPassword" required>
+            </div>
+            <button type="submit" class="btn btn-success">Cadastrar</button>
+        </form>
+        <p id="confirmationMessage" style="display: none; margin-top: 20px;"></p>
+    </div>
+    
+    <footer>
+        &copy; 2023 IGEN - Igualdade de Gênero
+    </footer>
+
+    <script>
+        const userForm = document.getElementById("userForm");
+        const confirmationMessage = document.getElementById("confirmationMessage");
+
+        userForm.addEventListener("submit", function (e) {
+            if (!userForm.checkValidity()) {
+                return;
+            }
+            e.preventDefault();
+
+            window.location.href = "cadastro_success.html";
+        });
+    </script>
+</body>
+</html>

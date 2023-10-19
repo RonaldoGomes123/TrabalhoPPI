@@ -1,52 +1,83 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width = device-width, initial-scale = 1.0"/>
-        <meta http-equiv="X-UA-compatible" content="ie=edge"/>
-        <link rel="stylesheet" href="styleIndex.css"/>
-    </head>
-    <body>   
-<header class="header">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>IGEN - Igualdade de Gênero</title>
+</head>
+<body>
+    <header>
+        <h1>IGEN - Igualdade de Gênero</h1>
+        <div class="header-buttons">
+            <a href="login/login.html">Login</a>
+            <a href="cadastrar/cadastro.html">Cadastrar</a>
+            <a href="artigos/indexPublico.html">Artigos</a>
+            <a href="sobreNos.html">Sobre Nos</a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="content">
+                <p>
+                    Bem-vindo à IGEN: Promovendo a Igualdade de Gênero
+                </p>
 
+              <p>  Na IGEN, acreditamos que a igualdade de gênero não é apenas um objetivo a ser alcançado, mas um compromisso que deve ser incansavelmente perseguido. Somos uma empresa dedicada a promover pautas relacionadas à igualdade de gênero em todas as esferas da sociedade. Desde igualdade salarial até igualdade educacional e além, estamos comprometidos em impulsionar mudanças significativas e duradouras.            </p>
+            <div class="hidden-text">
+                <strong>
+                    Nossa Missão:
+                </strong>
+                <p>
+                    Nosso propósito é simples, mas poderoso: trabalhamos incansavelmente para criar um mundo em que todas as pessoas, independentemente do gênero, tenham as mesmas oportunidades e direitos. Acreditamos que a igualdade de gênero não é apenas um direito humano fundamental, mas também uma base essencial para a construção de sociedades justas e prósperas.
+                    </p>
+                <strong>
+                    Nossos Objetivos
+                </strong>
+                <p>
 
-<a href="index.html"><img src="logo igen.JPG" alt=""></a>
-<nav>
-<ul class="menu">
- <li style="list-style: none;"><a href="">Sobre nós</a></li>   
- <li style="list-style: none;"><a href="">Contato</a></li>   
- <li style="list-style: none;"><a href="">Login</a></li>
-</ul>
-</nav>
+                    Igualdade Salarial: Lutamos para eliminar a disparidade salarial entre gêneros, garantindo que homens e mulheres recebam remunerações justas por seu trabalho.
+                </p>
+                    <p>
 
-</header>
+                        Igualdade Educacional: Trabalhamos para proporcionar igualdade de acesso e oportunidades na educação, capacitando mulheres e meninas a alcançarem seu pleno potencial.
+                    </p>    
+                    <p>
 
-<h1>IGEN - Sistema de Promoção da Igualdade de Gênero</h1>
-<section class="flex">
-<div>
-<a href="Igualdade_generos.html"><img src="igualdade.jpg" width="600" height="400"></a>
-<p>Igualdade entre os gêneros</p>
-</div>
-<div>
-<a href="consiciencia.html"><img src="bandeiraL.jpg" width="600" height="400"></a>
-<p>Consciência de gênero</p>
-</div>
-<div>
-<a href="Igualdade_salario.html"><img src="igualdade-emprego.jpg" width="600" height="400"></a>
-<p>Igualdade salarial</p>
-</div>
-<div>
-<a href="igualdade-educa.html"><img src="igualdade-na-educação.jpg"
-width="600" height="400"></a>
-<p>Igualdade de gênero na educação</p>
-</div>
+                        Conscientização e Advocacia: Promovemos a conscientização e a advocacia por questões relacionadas à igualdade de gênero, fornecendo informações, recursos e ferramentas para inspirar a mudança.
+                    </p>
+                    <p>
 
+                        Parcerias Colaborativas: Colaboramos com organizações, empresas e indivíduos comprometidos com a promoção da igualdade de gênero, criando redes de apoio e solidariedade.
+                    </p>
+                    <strong>
+                        Junte-se a Nós
+                    </strong>
+                    <p>
 
-</section>
+                        Na IGEN, acreditamos que a mudança é possível quando nos unimos em busca de um objetivo comum. Convidamos você a se juntar a nós nessa jornada em direção a um mundo mais igualitário e justo. Seja você um defensor experiente da igualdade de gênero ou alguém que deseja aprender mais, há um lugar para todos na IGEN.
+                    </p>
+                    
+                    Juntos, podemos moldar um futuro onde a igualdade de gênero não seja apenas uma visão, mas uma realidade. Junte-se a nós e faça parte da mudança.
+                    
+                    IGEN: Juntos Pela Igualdade de Gênero
+                    
+            </div>
+            <p class="read-more">Saiba Mais</p>
+        </div>
+    </div>
+    <footer>
+        &copy; 2023 IGEN - Igualdade de Gênero
+    </footer>
 
-    </body>
+    <script>
+        const hiddenText = document.querySelector('.hidden-text');
+        const readMoreButton = document.querySelector('.read-more');
 
-    <footer style="font-size: small; text-align: center;">
-        &copy; 2023 IGEN - Sistema de Promoção da Igualdade de Gênero
-        </footer>
-
+        readMoreButton.addEventListener('click', () => {
+            hiddenText.style.display = 'block';
+            readMoreButton.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

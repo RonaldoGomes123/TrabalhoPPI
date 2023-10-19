@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../style.css">
+    <title>Gerenciamento de Artigos - IGEN</title>
+</head>
+<body>
+    <header>
+        <h1>IGEN - Igualdade de Gênero</h1>
+        <div class="header-buttons">
+            <a href="../../index.html" class="btn btn-danger">Sair</a>
+            <a href="../cadastro_artigo.html" class="btn btn-success">Cadastrar Artigo</a>
+            <a href="../../edit/editAccount.html" class="btn btn-success">Editar Conta</a>
+            <a href="#" class="btn btn-success">Editar Artigos</a>
+            <a href="usuario.html" class="btn btn-success">Editar Usuarios</a>   
+        </div>
+    </header>
+    <div class="container">
+        <h2>Gerenciamento de Artigos</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="artigo1">
+                    <td>Igualdade de Genero</td>
+                    <td>
+                        <a href="editar_artigo.html" class="btn btn-primary">Editar</a>
+                        <button class="btn btn-danger" onclick="excluirArtigo('artigo1')">Excluir</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="centered-buttons">
+
+        <button onclick="voltarParaArtigos()" class="btn btn-primary">Voltar para Artigos</button>
+    </div>
+    <footer>
+        &copy; 2023 IGEN - Igualdade de Gênero
+    </footer>
+
+    <script>
+        function excluirArtigo(artigoId) {
+            const confirmDelete = confirm("Tem certeza de que deseja excluir este artigo?");
+            if (confirmDelete) {
+                alert("O artigo foi excluído com sucesso.");
+                const linhaArtigo = document.getElementById(artigoId);
+                if (linhaArtigo) {
+                    linhaArtigo.remove();
+                }
+            }
+        }
+        function voltarParaArtigos() {
+            window.location.href = "../index.html";
+        }
+    </script>
+</body>
+</html>

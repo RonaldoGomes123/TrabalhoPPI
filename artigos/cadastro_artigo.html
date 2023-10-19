@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>Cadastro de Artigo - IGEN</title>
+</head>
+<body>
+    <header>
+        <h1>IGEN - Igualdade de Gênero</h1>
+        <div class="header-buttons">
+            <a href="../index.html" class="btn btn-danger">Sair</a>
+            <a href="cadastro_artigo.html" class="btn btn-success">Cadastrar Artigo</a>
+            <a href="../edit/editAccount.html" class="btn btn-success">Editar Conta</a>
+            <a href="edit/artigo.html" class="btn btn-success">Editar Artigos</a>
+            <a href="edit/usuario.html" class="btn btn-success">Editar Usuarios</a>
+        </div>
+    </header>
+    <div class="container">
+        <h2>Cadastro de Artigo</h2>
+        <form id="articleForm">
+            <div class="form-group">
+                <label for="articleTitle">Título do Artigo</label>
+                <input type="text" class="form-control" id="articleTitle" name="articleTitle" required>
+            </div>
+            <div class="form-group">
+                <label for="articleText">Texto</label>
+                <textarea class="form-control" id="articleText" name="articleText" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="articleImage">Imagem Referencial</label>
+                <input type="text" class="form-control" id="articleImage" name="articleImage" required>
+            </div>
+            <button type="submit" class="btn btn-success">Salvar</button>
+        </form>
+        <p id="confirmationMessage" style="display: none; margin-top: 20px;"></p>
+    </div>
+    <div class="centered-buttons">
+
+        <button onclick="voltarParaArtigos()" class="btn btn-primary">Voltar para Artigos</button>
+    </div>
+    <footer>
+        &copy; 2023 IGEN - Igualdade de Gênero
+    </footer>
+
+    <script>
+        function voltarParaArtigos() {
+            window.location.href = "index.html";
+        }
+        const articleForm = document.getElementById("articleForm");
+        const confirmationMessage = document.getElementById("confirmationMessage");
+
+        articleForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            confirmationMessage.textContent = "Artigo enviado para análise e logo será publicado";
+            confirmationMessage.style.display = "block";
+        });
+    </script>
+</body>
+</html>
